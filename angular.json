@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-amazon-amplify-geo": {
+    "angular-map-amazon": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-amazon-amplify-geo",
+            "outputPath": "dist/angular-map-amazon",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -77,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-amazon-amplify-geo:build:production"
+              "browserTarget": "angular-map-amazon:build:production"
             },
             "development": {
-              "browserTarget": "angular-amazon-amplify-geo:build:development"
+              "browserTarget": "angular-map-amazon:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-amazon-amplify-geo:build"
+            "browserTarget": "angular-map-amazon:build"
           }
         },
         "test": {
@@ -112,5 +112,5 @@
       }
     }
   },
-  "defaultProject": "angular-amazon-amplify-geo"
+  "defaultProject": "angular-map-amazon"
 }
