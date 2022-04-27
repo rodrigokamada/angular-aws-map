@@ -53,11 +53,11 @@ export class AppComponent implements AfterViewInit {
 
       this.getCurrentPosition()
       .subscribe((position: any) => {
-        this.map.flyTo({ center: [position.latitude, position.longitude], zoom: 13 });
+        this.map.flyTo({ center: [position.longitude, position.latitude], zoom: 13 });
 
         const marker = new maplibregl.Marker();
-        marker.setLngLat([position.latitude, position.longitude]);
-        marker.setPopup(new maplibregl.Popup().setHTML('Angular Amazon Map'));
+        marker.setLngLat([position.longitude, position.latitude]);
+        marker.setPopup(new maplibregl.Popup().setHTML('Angular Map Amazon'));
         marker.addTo(this.map);
       });
     });
