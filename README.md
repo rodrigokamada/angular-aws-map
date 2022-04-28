@@ -1,4 +1,4 @@
-# Angular Map Amazon
+# Angular AWS Map
 
 
 Application example built with [Angular](https://angular.io/) 13 and adding the map [MapLibre](https://maplibre.org/) component using the [Amazon Amplify Geo](https://docs.amplify.aws/lib/geo/getting-started/q/platform/js/) and [Amazon Location Service](https://aws.amazon.com/location/) services.
@@ -35,35 +35,35 @@ Before you start, you need to install and configure the tools:
 **1.** Let's create the application with the Angular base structure using the `@angular/cli` with the route file and the SCSS style format.
 
 ```powershell
-ng new angular-map-amazon --routing true --style scss
-CREATE angular-map-amazon/README.md (1077 bytes)
-CREATE angular-map-amazon/.editorconfig (274 bytes)
-CREATE angular-map-amazon/.gitignore (548 bytes)
-CREATE angular-map-amazon/angular.json (3327 bytes)
-CREATE angular-map-amazon/package.json (1089 bytes)
-CREATE angular-map-amazon/tsconfig.json (863 bytes)
-CREATE angular-map-amazon/.browserslistrc (600 bytes)
-CREATE angular-map-amazon/karma.conf.js (1443 bytes)
-CREATE angular-map-amazon/tsconfig.app.json (287 bytes)
-CREATE angular-map-amazon/tsconfig.spec.json (333 bytes)
-CREATE angular-map-amazon/.vscode/extensions.json (130 bytes)
-CREATE angular-map-amazon/.vscode/launch.json (474 bytes)
-CREATE angular-map-amazon/.vscode/tasks.json (938 bytes)
-CREATE angular-map-amazon/src/favicon.ico (948 bytes)
-CREATE angular-map-amazon/src/index.html (309 bytes)
-CREATE angular-map-amazon/src/main.ts (372 bytes)
-CREATE angular-map-amazon/src/polyfills.ts (2338 bytes)
-CREATE angular-map-amazon/src/styles.scss (80 bytes)
-CREATE angular-map-amazon/src/test.ts (745 bytes)
-CREATE angular-map-amazon/src/assets/.gitkeep (0 bytes)
-CREATE angular-map-amazon/src/environments/environment.prod.ts (51 bytes)
-CREATE angular-map-amazon/src/environments/environment.ts (658 bytes)
-CREATE angular-map-amazon/src/app/app-routing.module.ts (245 bytes)
-CREATE angular-map-amazon/src/app/app.module.ts (393 bytes)
-CREATE angular-map-amazon/src/app/app.component.scss (0 bytes)
-CREATE angular-map-amazon/src/app/app.component.html (23364 bytes)
-CREATE angular-map-amazon/src/app/app.component.spec.ts (1133 bytes)
-CREATE angular-map-amazon/src/app/app.component.ts (231 bytes)
+ng new angular-aws-map --routing true --style scss
+CREATE angular-aws-map/README.md (1077 bytes)
+CREATE angular-aws-map/.editorconfig (274 bytes)
+CREATE angular-aws-map/.gitignore (548 bytes)
+CREATE angular-aws-map/angular.json (3327 bytes)
+CREATE angular-aws-map/package.json (1089 bytes)
+CREATE angular-aws-map/tsconfig.json (863 bytes)
+CREATE angular-aws-map/.browserslistrc (600 bytes)
+CREATE angular-aws-map/karma.conf.js (1443 bytes)
+CREATE angular-aws-map/tsconfig.app.json (287 bytes)
+CREATE angular-aws-map/tsconfig.spec.json (333 bytes)
+CREATE angular-aws-map/.vscode/extensions.json (130 bytes)
+CREATE angular-aws-map/.vscode/launch.json (474 bytes)
+CREATE angular-aws-map/.vscode/tasks.json (938 bytes)
+CREATE angular-aws-map/src/favicon.ico (948 bytes)
+CREATE angular-aws-map/src/index.html (309 bytes)
+CREATE angular-aws-map/src/main.ts (372 bytes)
+CREATE angular-aws-map/src/polyfills.ts (2338 bytes)
+CREATE angular-aws-map/src/styles.scss (80 bytes)
+CREATE angular-aws-map/src/test.ts (745 bytes)
+CREATE angular-aws-map/src/assets/.gitkeep (0 bytes)
+CREATE angular-aws-map/src/environments/environment.prod.ts (51 bytes)
+CREATE angular-aws-map/src/environments/environment.ts (658 bytes)
+CREATE angular-aws-map/src/app/app-routing.module.ts (245 bytes)
+CREATE angular-aws-map/src/app/app.module.ts (393 bytes)
+CREATE angular-aws-map/src/app/app.component.scss (0 bytes)
+CREATE angular-aws-map/src/app/app.component.html (23364 bytes)
+CREATE angular-aws-map/src/app/app.component.spec.ts (1133 bytes)
+CREATE angular-aws-map/src/app/app.component.ts (231 bytes)
 ✔ Packages installed successfully.
     Successfully initialized git.
 ```
@@ -180,7 +180,7 @@ export class AppComponent implements AfterViewInit {
 
         const marker = new maplibregl.Marker();
         marker.setLngLat([position.longitude, position.latitude]);
-        marker.setPopup(new maplibregl.Popup().setHTML('Angular Map Amazon'));
+        marker.setPopup(new maplibregl.Popup().setHTML('Angular AWS Map'));
         marker.addTo(this.map);
       });
     });
@@ -192,7 +192,7 @@ export class AppComponent implements AfterViewInit {
 
 ```html
 <div class="container-fluid py-3">
-  <h1>Angular Map Amazon</h1>
+  <h1>Angular AWS Map</h1>
 
   <div id="map"></div>
 </div>
@@ -213,7 +213,7 @@ export class AppComponent implements AfterViewInit {
 ```powershell
 npm start
 
-> angular-map-amazon@1.0.0 start
+> angular-aws-map@1.0.0 start
 > ng serve
 
 ✔ Browser application bundle generation complete.
@@ -236,9 +236,9 @@ Build at: 2022-04-26T10:47:33.505Z - Hash: 44780bc6612489fe - Time: 30672ms
 ✔ Compiled successfully.
 ```
 
-**11.** Ready! Access the URL `http://localhost:4200/` and check if the application is working. See the application working on [GitHub Pages](https://rodrigokamada.github.io/angular-map-amazon/) and [Stackblitz](https://stackblitz.com/edit/angular-map-amazon).
+**11.** Ready! Access the URL `http://localhost:4200/` and check if the application is working. See the application working on [GitHub Pages](https://rodrigokamada.github.io/angular-aws-map/) and [Stackblitz](https://stackblitz.com/edit/angular-aws-map).
 
-![Angular Map Amazon]()
+![Angular AWS Map]()
 
 
 
@@ -247,7 +247,7 @@ Build at: 2022-04-26T10:47:33.505Z - Hash: 44780bc6612489fe - Time: 30672ms
 **1.** Clone the repository.
 
 ```powershell
-git clone git@github.com:rodrigokamada/angular-map-amazon.git
+git clone git@github.com:rodrigokamada/angular-aws-map.git
 ```
 
 **2.** Install the dependencies.

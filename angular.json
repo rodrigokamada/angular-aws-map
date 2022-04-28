@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-map-amazon": {
+    "angular-aws-map": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-map-amazon",
+            "outputPath": "dist/angular-aws-map",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -77,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-map-amazon:build:production"
+              "browserTarget": "angular-aws-map:build:production"
             },
             "development": {
-              "browserTarget": "angular-map-amazon:build:development"
+              "browserTarget": "angular-aws-map:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-map-amazon:build"
+            "browserTarget": "angular-aws-map:build"
           }
         },
         "test": {
@@ -112,5 +112,5 @@
       }
     }
   },
-  "defaultProject": "angular-map-amazon"
+  "defaultProject": "angular-aws-map"
 }

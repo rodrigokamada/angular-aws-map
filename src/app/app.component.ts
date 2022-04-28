@@ -57,7 +57,7 @@ export class AppComponent implements AfterViewInit {
 
         const marker = new maplibregl.Marker();
         marker.setLngLat([position.longitude, position.latitude]);
-        marker.setPopup(new maplibregl.Popup().setHTML('Angular Map Amazon'));
+        marker.setPopup(new maplibregl.Popup().setHTML('Angular AWS Map'));
         marker.addTo(this.map);
       });
     });

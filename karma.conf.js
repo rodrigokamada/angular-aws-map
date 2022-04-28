@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/angular-map-amazon'),
+      dir: require('path').join(__dirname, './coverage/angular-aws-map'),
       subdir: '.',
       reporters: [
         { type: 'html' },
