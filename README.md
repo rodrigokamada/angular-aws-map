@@ -29,7 +29,101 @@ Before you start, you need to install and configure the tools:
 ## Getting started
 
 
+### Create and configure the account on the Amazon Location Service
+
+
+[Amazon Location Service](https://aws.amazon.com/location/) provides location functionality to applications without compromising data security and user privacy.
+
+
+**1.** Let's create and configure the account. Access the site [https://aws.amazon.com/location/](https://aws.amazon.com/location/) and click on the button *Get Started with Amazon Location Service*.
+
+![Amazon Location Service - Home page](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139657/Blog/angular-aws-map/angular-aws-map-step1.png)
+
+**2.** Click on the option *Root user*, fill in the field *Root user email address* and click on the button *Next*.
+
+![Amazon Location Service - Sign in](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139669/Blog/angular-aws-map/angular-aws-map-step2.png)
+
+**Note:**
+
+* If you don't have an Amazon account, do steps 1 to 9 of the post *[Authentication using the Amazon Cognito to an Angular application](https://dev.to/rodrigokamada/authentication-using-the-amazon-cognito-to-an-angular-application-ilh)* in the session *Create and configure the account on the Amazon Cognito*.
+
+**3.** Fill in the field *Security check* and click on the button *Submit*.
+
+![Amazon Location Service - Security check](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139684/Blog/angular-aws-map/angular-aws-map-step3.png)
+
+**4.** Fill in the field *Password* and click on the button *Sign in*.
+
+![Amazon Location Service - Root user sign in](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139697/Blog/angular-aws-map/angular-aws-map-step4.png)
+
+**5.** Click on the menu *Services*.
+
+![Amazon Location Service - Add location data](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139715/Blog/angular-aws-map/angular-aws-map-step5.png)
+
+**6.** Click on the menu *Maps*.
+
+![Amazon Location Service - Menu Services](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139728/Blog/angular-aws-map/angular-aws-map-step6.png)
+
+**7.** Click on the link *Create map*.
+
+![Amazon Location Service - Maps](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139742/Blog/angular-aws-map/angular-aws-map-step7.png)
+
+**8.** Fill in the field *Name*, click on the options *Esri Light* and *To use Amazon Location Maps...* and click on the button *Create map*.
+
+![Amazon Location Service - Create map](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139761/Blog/angular-aws-map/angular-aws-map-step8.png)
+
+**9.** Click on the tab *Embed map*.
+
+![Amazon Location Service - Map information](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139771/Blog/angular-aws-map/angular-aws-map-step9.png)
+
+**10.** Click on the link *Set up authentication*, click on the option *Create a new Amazon Cognito unauthenticated Identity pool* and click on the link *Create new Amazon Cognito Identity pool*.
+
+![Amazon Location Service - Embed map](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139795/Blog/angular-aws-map/angular-aws-map-step10.png)
+
+**11.** Fill in the field *Identity pool name*, click on the option *Enable access to unauthenticated identities* and click on the button *Create Pool*.
+
+![Amazon Location Service - New identity pool](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139806/Blog/angular-aws-map/angular-aws-map-step11.png)
+
+**12.** Click on the link *Edit*, fill in the field with the *JSON* below and click on the link *Allow*.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "mobileanalytics:PutEvents",
+        "cognito-sync:*",
+        "geo:GetMap*"
+      ],
+      "Resource": [
+        "*"
+      ],
+      "Condition": {
+        "StringLike": {
+          "aws:referer": [
+            "*"
+          ]
+        }
+      }
+    }
+  ]
+}
+```
+
+![Amazon Location Service - Identity the IAM roles](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139820/Blog/angular-aws-map/angular-aws-map-step12.png)
+
+**13.** Copy the authentication pool ID displayed and, in my case, the value `us-east-1:57a33aaf-0026-44e3-908c-7fb9d5730b9f` was displayed because this value will be configured in the Angular application.
+
+![Amazon Location Service - Getting started](https://res.cloudinary.com/rodrigokamada/image/upload/v1651139838/Blog/angular-aws-map/angular-aws-map-step13.png)
+
+**14.** Ready! Map and authentication pool created.
+
+
 ### Create the Angular application
+
+
+[Angular](https://angular.io/) is a development platform for building WEB, mobile and desktop applications using HTML, CSS and TypeScript (JavaScript). Currently, Angular is at version 13 and Google is the main maintainer of the project.
 
 
 **1.** Let's create the application with the Angular base structure using the `@angular/cli` with the route file and the SCSS style format.
