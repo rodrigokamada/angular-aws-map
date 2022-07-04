@@ -1,7 +1,7 @@
 # Angular AWS Map
 
 
-Application example built with [Angular](https://angular.io/) 13 and adding the map [MapLibre](https://maplibre.org/) component using the [Amazon Amplify Geo](https://docs.amplify.aws/lib/geo/getting-started/q/platform/js/) and [Amazon Location Service](https://aws.amazon.com/location/) services.
+Application example built with [Angular](https://angular.io/) 14 and adding the map [MapLibre](https://maplibre.org/) component using the [Amazon Amplify Geo](https://docs.amplify.aws/lib/geo/getting-started/q/platform/js/) and [Amazon Location Service](https://aws.amazon.com/location/) services.
 
 This tutorial was posted on my [blog](https://rodrigo.kamada.com.br/blog/adicionando-o-componente-de-mapa-usando-os-servicos-da-amazon-em-uma-aplicacao-angular) in portuguese and on the [DEV Community](https://dev.to/rodrigokamada/adding-the-map-component-using-the-aws-services-to-an-angular-application-3a4a) in english.
 
@@ -330,7 +330,7 @@ Build at: 2022-04-26T10:47:33.505Z - Hash: 44780bc6612489fe - Time: 30672ms
 ✔ Compiled successfully.
 ```
 
-**11.** Ready! Access the URL `http://localhost:4200/` and check if the application is working. See the application working on [GitHub Pages](https://rodrigokamada.github.io/angular-aws-map/) and [Stackblitz](https://stackblitz.com/edit/angular-aws-map).
+**11.** Ready! Access the URL `http://localhost:4200/` and check if the application is working. See the application working on [GitHub Pages](https://rodrigokamada.github.io/angular-aws-map/) and [Stackblitz](https://stackblitz.com/edit/angular14-aws-map).
 
 ![Angular AWS Map]()
 
