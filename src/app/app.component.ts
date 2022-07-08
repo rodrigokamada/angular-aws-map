@@ -1,6 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { Observable, Subscriber } from 'rxjs';
-import Amplify from 'aws-amplify';
+import { Amplify } from 'aws-amplify';
 import { createMap } from 'maplibre-gl-js-amplify';
 import * as maplibregl from 'maplibre-gl';
 
