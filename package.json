@@ -25,7 +25,7 @@
     "@angular/router": "^14.1.1",
     "aws-amplify": "^4.3.30",
     "bootstrap": "^5.2.0",
-    "bootstrap-icons": "^1.8.3",
+    "bootstrap-icons": "^1.9.1",
     "maplibre-gl": "^1.15.3",
     "maplibre-gl-js-amplify": "^1.6.0",
     "rxjs": "~7.5.5",
